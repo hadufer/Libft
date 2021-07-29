@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/29 19:50:09 by hadufer           #+#    #+#             */
-/*   Updated: 2021/07/29 20:06:41 by hadufer          ###   ########.fr       */
+/*   Created: 2021/07/29 20:07:22 by hadufer           #+#    #+#             */
+/*   Updated: 2021/07/29 22:36:01 by hadufer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char* ft_strtrim(char const* s1, char const* set)
 {
-	char	*ret;
-	size_t	i;
+	size_t	begin;
+	size_t	end;
+	char*	ret;
 
-	if (!s1 || !s2)
+	ret = 0;
+	if (!s1 || !set)
 		return (NULL);
-	ret = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2)));
-	if (!ret)
-		return (NULL);
-	i = 0;
-	while (*s1)
-	{
-		ret[i] = *s1;
-		i++;
-		s1++;
-	}
-	while (*s2)
-	{
-		ret[i] = *s2;
-		i++;
-		s2++;
-	}
-	ret[i] = 0;
+	begin = 0;
+	end = ft_strlen(s1);
+	while (s1[begin] && ft_strchr(set, s1[begin]))
+		begin++;
+	while (s1[end - 1] && ft_strchr(set, s1[end - 1]) && end > begin)
+		end--;
+	ret = malloc(sizeof(char) * (end - begin + 1));
+	if (ret)
+		ft_strlcpy(ret, (char *)(s1 + begin), end - begin + 1);
 	return (ret);
 }

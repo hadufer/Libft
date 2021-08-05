@@ -6,7 +6,7 @@
 #    By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/27 17:09:00 by hadufer           #+#    #+#              #
-#    Updated: 2021/08/05 15:09:00 by hadufer          ###   ########.fr        #
+#    Updated: 2021/08/05 15:27:17 by hadufer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,15 +21,6 @@ ft_isascii.c \
 ft_isdigit.c \
 ft_isprint.c \
 ft_itoa.c \
-ft_lstadd_back.c \
-ft_lstadd_front.c \
-ft_lstclear.c \
-ft_lstdelone.c \
-ft_lstiter.c \
-ft_lstlast.c \
-ft_lstmap.c \
-ft_lstnew.c \
-ft_lstsize.c \
 ft_memchr.c \
 ft_memcmp.c \
 ft_memcpy.c \
@@ -56,7 +47,18 @@ ft_substr.c \
 ft_tolower.c \
 ft_toupper.c \
 
+BONUS	= ft_lstadd_back.c \
+ft_lstadd_front.c \
+ft_lstclear.c \
+ft_lstdelone.c \
+ft_lstiter.c \
+ft_lstlast.c \
+ft_lstmap.c \
+ft_lstnew.c \
+ft_lstsize.c \
+
 OBJS	= ${SRCS:.c=.o}
+OBJS_BONUS = ${BONUS:.c=.o}
 
 HEADER	= includes
 
@@ -74,6 +76,9 @@ ${NAME}: all
 
 all:	${OBJS}
 			$(AR) ${NAME} ${OBJS}
+
+bonus:	${OBJS} ${OBJS_BONUS}
+			$(AR) ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
 		${RM} ${OBJS}

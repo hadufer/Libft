@@ -6,7 +6,7 @@
 #    By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/27 17:09:00 by hadufer           #+#    #+#              #
-#    Updated: 2021/08/05 15:27:17 by hadufer          ###   ########.fr        #
+#    Updated: 2021/08/06 19:57:29 by hadufer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,4 +88,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY:	all clean fclean re ${NAME}
+.PHONY:	all clean fclean bonus re ${NAME}

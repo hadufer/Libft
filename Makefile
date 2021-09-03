@@ -6,7 +6,7 @@
 #    By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/27 17:09:00 by hadufer           #+#    #+#              #
-#    Updated: 2021/08/06 19:57:29 by hadufer          ###   ########.fr        #
+#    Updated: 2021/09/03 17:25:22 by hadufer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,7 @@ bonus:	${OBJS} ${OBJS_BONUS}
 			$(AR) ${NAME} ${OBJS} ${OBJS_BONUS}
 
 clean:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean:	clean
 		${RM} ${NAME}

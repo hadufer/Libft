@@ -6,7 +6,7 @@
 /*   By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 18:22:09 by hadufer           #+#    #+#             */
-/*   Updated: 2021/08/04 19:28:44 by hadufer          ###   ########.fr       */
+/*   Updated: 2021/10/18 11:26:35 by hadufer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_itoa(int n)
 	if (!ret)
 		return (NULL);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		ret[0] = '-';

@@ -6,13 +6,14 @@
 /*   By: hadufer <hadufer@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 18:26:58 by hadufer           #+#    #+#             */
-/*   Updated: 2021/07/27 17:49:01 by hadufer          ###   ########.fr       */
+/*   Updated: 2021/10/18 13:27:32 by hadufer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+
 typedef struct s_list
 {
 	void			*content;
